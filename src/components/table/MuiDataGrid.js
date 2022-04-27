@@ -37,7 +37,7 @@ const MuiDataGrid = () => {
     })
   );
   return (
-    <div style={{ height: 500, background: "white" }}>
+    <div style={{ height: 400, background: "white" }}>
       <h1>MuiDataGrid</h1>
       <DataGrid columns={columns} rows={rows} pageSize={25} />
     </div>

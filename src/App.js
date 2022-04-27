@@ -1,5 +1,6 @@
 import "./App.css";
-import Component1 from "./components/Component1";
+import ButtonCallSWR from "./components/ButtonCallSWR";
+import InputContent from "./components/InputContent";
 import MuiBasicTable from "./components/table/MuiBasicTable";
 import MuiDataGrid from "./components/table/MuiDataGrid";
 
@@ -11,7 +12,8 @@ function App() {
         <MuiDataGrid />
       </div>
       <div className="left">
-        <Component1 />
+        <ButtonCallSWR />
+        <InputContent />
       </div>
     </div>
   );

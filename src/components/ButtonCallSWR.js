@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import useStateHook from "../hooks/useStateHook";
 
-const Component1 = () => {
+const ButtonCallSWR = () => {
   const [states, setStates] = useState();
   const callState = useCallback((e) => {
     e.preventDefault();
@@ -9,12 +9,10 @@ const Component1 = () => {
   }, []);
   return (
     <>
-      <h1>Component1</h1>
-      <div
-        style={{ width: "300px", border: "2px solid black", padding: "1rem" }}
-      >
+      <div>
+        <h1>ButtonCallSWR</h1>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <h1>데이터</h1>
+          <h2>데이터</h2>
           <button onClick={callState}>검색</button>
         </div>
         <PData states={states} />
@@ -23,7 +21,7 @@ const Component1 = () => {
   );
 };
 
-export default Component1;
+export default ButtonCallSWR;
 
 function PData({ states }) {
   const { stateData, isLoading, isError } = useStateHook(states);

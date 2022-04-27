@@ -4,8 +4,16 @@
   display: flex;
 }
 .right {
-  width: 60%;
+  width: 70%;
+}
+.right > div {
+  border: 2px solid black;
+  padding: 0.5rem;
 }
 .left {
-  width: 40%;
+  width: 30%;
+}
+.left > div {
+  border: 2px solid black;
+  padding: 0.5rem;
 }
