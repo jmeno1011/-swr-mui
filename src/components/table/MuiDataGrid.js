@@ -1,6 +1,6 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import useApi from "../../hooks/swrhooks";
+import useTestHook from "../../hooks/useTestHook";
 
 const columns = [
   {
@@ -25,7 +25,7 @@ const columns = [
 
 const MuiDataGrid = () => {
   const rows = [];
-  const { data, error } = useApi();
+  const { data, error } = useTestHook();
   if (error) return "An error has occurred.";
   if (!data) return "Loading...";
   data?.table.map((value, index) =>
@@ -37,7 +37,7 @@ const MuiDataGrid = () => {
     })
   );
   return (
-    <div style={{ height: 500, width: "100%", background: "white" }}>
+    <div style={{ height: 500, background: "white" }}>
       <h1>MuiDataGrid</h1>
       <DataGrid columns={columns} rows={rows} pageSize={25} />
     </div>

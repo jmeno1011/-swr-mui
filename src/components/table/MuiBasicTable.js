@@ -6,12 +6,12 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import useApi from "../../hooks/swrhooks";
+import useTestHook from "../../hooks/useTestHook";
 import { createData } from "../../utils/functions";
 
 const MuiBasicTable = () => {
   const rows = [];
-  const { data, error } = useApi();
+  const { data, error } = useTestHook();
   if (error) return "An error has occurred.";
   if (!data) return "Loading...";
   data?.table.map((value) =>

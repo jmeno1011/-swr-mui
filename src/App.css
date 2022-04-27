@@ -1,10 +1,7 @@
 .App {
-  display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: center;
   height: 100%;
-  flex-direction: column;
+  display: flex;
 }
 .right {
   width: 60%;
